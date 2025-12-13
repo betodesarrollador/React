@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import NewArrivals from './components/NewArrivals';
 import Banner from './components/Banner';
 import PopularProducts from './components/PopularProducts';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -13,8 +14,10 @@ export default function Home() {
       <NewArrivals />
        {/* Banner */}
       <Banner />
-       {/* Banner */}
+       {/* PopularProducts */}
       <PopularProducts />
+      {/* Footer */}
+      <Footer />
     </>
   );
 }
