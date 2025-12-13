@@ -1,9 +1,10 @@
-import React from "react";
+import React, { use } from "react";
 import Title from "./Title";
-import { dummyProducts } from "../components/data";
 import { Item } from "./Item";
+import { useAppContext } from "../context/AppContext";
 
 function NewArrivals() {
+  const { products } = useAppContext();
   const [stopScroll, setStopScroll] = React.useState(false);
   return (
     <>
@@ -25,7 +26,7 @@ function NewArrivals() {
             }}
           >
             <div className="flex">
-              {dummyProducts.slice(0, 8).map((product, index) => (
+              {products.slice(0, 8).map((product, index) => (
                 <div
                   key={index}
                   className="w-56 m-5 h-103 relative flex-shrink-0"
@@ -43,4 +44,3 @@ function NewArrivals() {
 }
 
 export default NewArrivals;
-
