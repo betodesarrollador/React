@@ -14,7 +14,7 @@ function PopularProducts() {
 
   return (
     <section className="max-padd-container py-16 xl:py-28">
-      <Title title1="Popular" title2="Products" title1Styles="pb-6" />
+      <Title title1="Popular" title2="Productos" title1Styles="pb-6" />
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-8 gap-y-12!">
         {popular.slice(0, 5).map((product, index) => (
           <div key={index} className="w-56 m-5 h-103 relative flex-shrink-0">

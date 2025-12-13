@@ -11,7 +11,7 @@ function NewArrivals() {
       <section className="max-padd-container py-16 xl:py-28">
         {" "}
         {/* ← apertura */}
-        <Title title1="New" title2="Arrivals" title1Styles="pb-6" />
+        <Title title1="Recién" title2="llegados" title1Styles="pb-6" />
         <div
           className="overflow-hidden relative"
           onMouseEnter={() => setStopScroll(true)}
