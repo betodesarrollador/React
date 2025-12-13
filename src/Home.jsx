@@ -1,23 +1,21 @@
-import React from 'react';
-import Hero from './components/Hero';
-import NewArrivals from './components/NewArrivals';
-import Banner from './components/Banner';
-import PopularProducts from './components/PopularProducts';
-import Footer from './components/Footer';
+import React from "react";
+import Hero from "./components/Hero";
+import NewArrivals from "./components/NewArrivals";
+import Banner from "./components/Banner";
+import PopularProducts from "./components/PopularProducts";
 
+// El header y Footer esta En App.jsx
 export default function Home() {
   return (
     <>
-    {/* Hero */}
+      {/* Hero */}
       <Hero />
-     {/* NewArrivals */}
+      {/* NewArrivals */}
       <NewArrivals />
-       {/* Banner */}
+      {/* Banner */}
       <Banner />
-       {/* PopularProducts */}
+      {/* PopularProducts */}
       <PopularProducts />
-      {/* Footer */}
-      <Footer />
     </>
   );
 }

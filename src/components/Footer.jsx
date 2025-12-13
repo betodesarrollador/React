@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { Link } from "react-router";
 import Logo from "../assets/logo.png";
 
@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="sm:col-span-2 lg:col-span-1">
            {/* Logo */}
       <Link href={"/"} className="flex gap-1">
-        <img src={Logo} height={33} width={33} alt="logo" />
+        <img src={Logo} height={38} width={33} alt="logo" />
         <h3 className="text-2x1">
           Vitrina<span className="text-destructive font-bold"> Colombia</span>
         </h3>
@@ -60,7 +60,7 @@ const Footer = () => {
               <input
                 className="focus:ring-2 ring-destructive outline-none w-full max-w-64 py-2 rounded px-2"
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Introduce tu correo electrónico"
               />
 
               <button className="bg-destructive px-4 py-2 text-white rounded">
@@ -76,7 +76,7 @@ const Footer = () => {
         Right Reserved.
       </p>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
