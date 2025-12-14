@@ -19,13 +19,14 @@ const Header = () => {
         </h3>
       </Link>
 
+
       {/* Desktop Menu */}
       <div className="hidden sm:flex">
         <div className="hidden sm:flex gap-4 md:gap-12 mr-4">
           <Link href="#">Home</Link>
           <Link href="#">About</Link>
           <Link href="#">Contact</Link>
-          <Link href="#">Collection</Link>
+           <Link to="/collection" onClick={() => setOpen(false)}>Collection</Link>
         </div>
       </div>
 
