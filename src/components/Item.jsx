@@ -27,9 +27,11 @@ export const Item = ({ product }) => {
         <h4 className="truncate">{product.name}</h4>
 
         <div className="flex items-center gap-0.5">
-          {[...Array(5)].map((_, i) => (
-            <img key={i} src={start} alt="star" height={22} width={16} />
-          ))}
+          <img src={start} alt="star" height={22} width={16} />
+          <img src={start} alt="star" height={22} width={16} />
+          <img src={start} alt="star" height={22} width={16} />
+          <img src={start} alt="star" height={22} width={16} />
+          <img src={start} alt="star" height={22} width={16} />
           <p>(5.0)</p>
         </div>
 

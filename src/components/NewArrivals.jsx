@@ -9,8 +9,7 @@ function NewArrivals() {
   return (
     <>
       <section className="max-padd-container py-16 xl:py-28">
-        {" "}
-        {/* ← apertura */}
+       {/* ← Title */}
         <Title title1="Recién" title2="llegados" title1Styles="pb-6" />
         <div
           className="overflow-hidden relative"
