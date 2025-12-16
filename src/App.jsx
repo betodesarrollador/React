@@ -5,6 +5,7 @@ import AppContextProvider from "./context/AppContext";
 import Home from "./Home";
 import Collection from "./collection/page";
 import ProductDetail from "./product_id/page";
+import Cart from "./cart/page";
 import "./index.css";
 
 function App() {
@@ -21,7 +22,9 @@ function App() {
              {/* Ruta Collection */}
             <Route path="/Collection" element={<Collection />} />
              {/* Ruta Product/id */}
-            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/Product/:id" element={<ProductDetail />} />
+             {/* Ruta Cart */}
+            <Route path="/cart" element={<Cart />} /> 
           </Routes>
           {/* Footer */}
           <Footer />
