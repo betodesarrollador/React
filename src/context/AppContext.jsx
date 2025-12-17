@@ -3,12 +3,15 @@ import { dummyProducts } from "../components/data";
 
 const AppContext = createContext(null);
 
-export const useAppContext = () => useContext(AppContext);
+export const useAppContext = () => {
+  return useContext(AppContext);
+};
 
 const AppContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [isSeller, setIsSeller] = useState(false);
   const [cartItems, setCartItems] = useState({});
+  const [user, setUser] = useState(true)
 
   // vALOR D ELA MONEDA
   const currency = import.meta.env.VITE_CURRENCY || "$";
@@ -24,7 +27,19 @@ const AppContextProvider = ({ children }) => {
     setCartItems(cartData);
     //console.log(cartData);
   };
-  // total cantidad del cart
+  //
+  const getCartAmount = () => {
+    let totalAmount = 0;
+    for (const itemId in cartItems) {
+      let itemInfo = products.find((product) => product._id === itemId);
+      if (cartItems[itemId] > 0) {
+        totalAmount += itemInfo.offerPrice * cartItems[itemId];
+      }
+    }
+    return Math.floor(totalAmount * 100) / 100;
+  };
+
+  // Contar articulos del cart
   const getCartCount = () => {
     let totalCount = 0;
     for (const itemId in cartItems) {
@@ -34,6 +49,7 @@ const AppContextProvider = ({ children }) => {
     }
     return totalCount;
   };
+
   // update cantidad del cart
   const updateCartQuantity = (itemId, quantity) => {
     let cartData = structuredClone(cartItems);
@@ -46,6 +62,7 @@ const AppContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    // getProducts();
     setProducts(dummyProducts);
   }, []);
 
@@ -60,6 +77,8 @@ const AppContextProvider = ({ children }) => {
         addToCart,
         getCartCount,
         updateCartQuantity,
+        getCartAmount,
+        user,
       }}
     >
       {children}

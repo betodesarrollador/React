@@ -1,5 +1,6 @@
 import React from "react";
 import { useAppContext } from "../context/AppContext";
+import CartTotal from "../components/CartTotal"; 
 import { useNavigate } from "react-router-dom";
 import trash from "../assets/trash.svg";
 import back from "../assets/back.svg";
