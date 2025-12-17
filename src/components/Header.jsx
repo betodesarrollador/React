@@ -1,4 +1,5 @@
 import React from "react";
+import { useAppContext } from "../context/AppContext";
 import { Link } from "react-router";
 import Logo from "../assets/logo.png";
 import Menu from "../assets/menu.svg";
@@ -7,6 +8,7 @@ import Basket from "../assets/basket.svg";
 import User from "../assets/user.svg";
 
 const Header = () => {
+  const { getCartCount } = useAppContext();
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -48,11 +50,11 @@ const Header = () => {
           className="hidden sm:block"
         />
         {/* cart */}
-        <Link href={"/cart"} className="relative cursor-pointer">
+        <Link to={'/cart'} className="relative cursor-pointer">
           <img src={Basket} height={25} width={25} alt="basket" />
 
           <button className="absolute -top-3 -right-2 text-xs text-white bg-destructive w-[18px] h-[18px] rounded-full">
-            0
+            {getCartCount()}
           </button>
         </Link>
 
